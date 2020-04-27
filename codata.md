@@ -105,6 +105,8 @@ Furthermore, the inciting incident was the fact that if we wrap `HList` into any
 
 This fact shows me that in many regards, we implicitly feel that it is natural (very freely used here) to use data _in_ our programs, and codata for fixed program structure constructs, parsers, generators and typecheckers. Almost all of these structures are more easily expressed as codata, but we never need to think about it that way, because we are working with them on a instance-defined basis, and being codata, they start off with exposed internals, so it's easy to disregard what the _whole_ is. We do not care, as long as it works. Caring about it might bring us some benefits, however.
 
+# Caring is (co)sharing
+
 Observe the following function:
 
 ```scala
