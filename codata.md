@@ -1,7 +1,7 @@
 
 ## Motivation
 
-So, for context, we need to establish that `HList` exists as a type of heterogeneous lists, meaning that it can have any number of different values of any number of different types in it. As is the norm, the `HList` is constructed by supplying members, for example: `3 :: 4 :: "foo" :: HNil` would be of type `Int :: Int :: String :: HNil`.
+So, for context, we need to establish that `HList` exists as a type of heterogeneous lists, meaning that it can have any number of different values of any number of different types in it. As is the norm, the `HList` is constructed by supplying members, for example: `3 :: 4 :: "foo" :: HNil` would be of type `Int :: Int :: String :: HNil`. Implementations of this are almost always hacking away at extremely high-level features of the source language's type system, meaning that they're pretty much considered rare beasts. They are **extremely** useful, however.
 
 At some point during the previous week, the question of putting `HList` into a `List` arose, and it got me thinking about what happens when we put an instance of `HList` into a `List`, and it got me here:
 
