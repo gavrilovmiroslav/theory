@@ -1,3 +1,4 @@
+# Thoughts on Codata
 
 ## Motivation
 
