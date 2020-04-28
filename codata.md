@@ -22,7 +22,7 @@ are any two types of the default kind (*):
 	given T, U : *. (T :: U) : HList
 ```
 
-As I write this, I realize that I have just technically declared `HList` to be a kind (to be explicit, a type of types, as "kind", "type" and "sort" have different meanings in different fields), and the `T :: U` a way of combining types T and U from any kind into a type in this new kind. What about the terminator singleton `HNil`? There's nothing peculiar about `HNil`, and for all intents and purposes, it is selected arbitrarily as a nominal `Unit`-equivalent type to represent the end of our lists.
+As I write this, I realize that I have just technically declared `HList` to be a kind (to be explicit, a type of types; "kind", "type" and "sort" have different meanings in different fields), and `T :: U` a way of combining types T and U from any kind into a type in this new kind. What about the terminator singleton `HNil`? There's nothing peculiar about `HNil`, and for all intents and purposes, it is selected arbitrarily as a nominal `Unit`-equivalent type to represent the end of our lists.
 
 In practice, lifting `HList` to be a kind is done (simulated if we don't have higher-kinded types) by adding a type parameter to the type constructor of `::` that is constrainted to itself be an `HList`. In theory, it's done through fix-pointing on a coalgebra. Before you get scared, here's what a coalgebra is for us:
 
