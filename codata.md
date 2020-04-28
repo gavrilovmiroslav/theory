@@ -125,7 +125,7 @@ The dual to this function would be:
 
 This is a general `fold`, taking a structurally (`F`) recursed (`Fix`) object of type `Fix[F]`, a fold of one step of recursion into a single value of type `A`, and then stepping through the process until we get a single `A`.
 
->	A general of this type is called a `catamorphism`.
+>	A general fold of this type is called a `catamorphism`.
 
 This means that once we've corecursively built up a `Fix[F]` (for example using our `gen()` function from above), we could apply a random algebra to bring it down, simplify it into, say a boolean. Something like:
 
