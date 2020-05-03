@@ -47,7 +47,7 @@ Similarly, an algebra is:
 In our case, we have something of this kind:
 
 ```scala
-	given A, B : *. Algebra[::[_], (A, B)] : HList = (A, B) => A :: B
+	given A, B : *. Coalgebra[::[_], (A, B)] : HList = (A, B) => A :: B
 ```
 
 This is _precisely_ our `HList` list constructor. It can be hard to think about this, because `F[A] => A` looks more correct, given that we are feeding in a number of elements (one could almost say, a list), and getting out one single element. The point is that the resulting element is of a higher-kinded type, in our case `::`. 
